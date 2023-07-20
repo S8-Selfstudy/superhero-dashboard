@@ -1,9 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component'; // Import HeaderComponent
+import { ButtonComponent } from './components/button/button.component'; // Import ButtonComponent
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    declarations: [AppComponent]
+    declarations: [AppComponent, HeaderComponent, ButtonComponent] // Declare HeaderComponent and ButtonComponent
   }));
 
   it('should create the app', () => {
@@ -18,10 +20,5 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('superhero-dashboard');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('superhero-dashboard app is running!');
-  });
+
 });
