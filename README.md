@@ -1,5 +1,5 @@
 ---
-<h1 align="center"> REST API created with .NET 7 </h1>
+<h1 align="center">Angular 16 project created with Typescript </h1>
 <h3 align="center"> Working pipeline with CI/CD </h3>
 <p>Used to prepare graduation internship project
 </p>
