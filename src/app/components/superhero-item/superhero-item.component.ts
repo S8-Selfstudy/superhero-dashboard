@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { SuperHero } from 'src/app/SuperHero';
 
 @Component({
   selector: 'app-superhero-item',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./superhero-item.component.css']
 })
 export class SuperheroItemComponent {
+  @Input() superhero?: SuperHero;
 
 }

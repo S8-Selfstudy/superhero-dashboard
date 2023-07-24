@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SuperheroesComponent } from './superheroes.component';
+import { SuperheroItemComponent } from '../superhero-item/superhero-item.component';
 
 describe('SuperheroesComponent', () => {
   let component: SuperheroesComponent;
@@ -8,7 +9,7 @@ describe('SuperheroesComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SuperheroesComponent]
+      declarations: [SuperheroesComponent, SuperheroItemComponent]
     });
     fixture = TestBed.createComponent(SuperheroesComponent);
     component = fixture.componentInstance;
