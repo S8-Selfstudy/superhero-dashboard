@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/button/button.component';
 import { SuperheroesComponent } from './components/superheroes/superheroes.component';
 import { SuperheroItemComponent } from './components/superhero-item/superhero-item.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SuperheroItemComponent } from './components/superhero-item/superhero-it
     SuperheroItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
