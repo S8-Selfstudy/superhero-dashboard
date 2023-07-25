@@ -3,10 +3,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component'; // Import HeaderComponent
 import { ButtonComponent } from './components/button/button.component'; // Import ButtonComponent
 import { SuperheroesComponent } from './components/superheroes/superheroes.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    declarations: [AppComponent, HeaderComponent, ButtonComponent, SuperheroesComponent] // Declare HeaderComponent and ButtonComponent
+    declarations: [AppComponent, HeaderComponent, ButtonComponent, SuperheroesComponent],
+    imports: [HttpClientModule]
   }));
 
   it('should create the app', () => {
