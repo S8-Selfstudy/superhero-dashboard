@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { SuperheroService } from 'src/app/services/superhero.service';
 import { SuperHero } from 'src/app/SuperHero';
-import { SUPERHEROS } from 'src/app/mock-superheros';
 
 @Component({
   selector: 'app-superheroes',
@@ -8,6 +8,12 @@ import { SUPERHEROS } from 'src/app/mock-superheros';
   styleUrls: ['./superheroes.component.css']
 })
 export class SuperheroesComponent {
-  superheroes: SuperHero[] = SUPERHEROS;
+  superheroes: SuperHero[] = [];
+
+  constructor(private superheroService: SuperheroService) { }
+
+  ngOnInit(): void {
+    this.superheroService.getSuperheroes().subscribe((superheroes) => this.superheroes = superheroes);
+  }
 
 }
