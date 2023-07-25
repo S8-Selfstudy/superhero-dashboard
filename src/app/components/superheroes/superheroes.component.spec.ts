@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { HttpClientModule } from '@angular/common/http';
 import { SuperheroesComponent } from './superheroes.component';
 import { SuperheroItemComponent } from '../superhero-item/superhero-item.component';
 
@@ -11,7 +11,7 @@ describe('SuperheroesComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [SuperheroesComponent, SuperheroItemComponent],
-      imports: [FontAwesomeModule]
+      imports: [FontAwesomeModule, HttpClientModule]
     });
     fixture = TestBed.createComponent(SuperheroesComponent);
     component = fixture.componentInstance;
