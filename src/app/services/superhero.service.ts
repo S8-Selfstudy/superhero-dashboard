@@ -8,11 +8,11 @@ import { SUPERHEROS } from '../mock-superheros';
   providedIn: 'root'
 })
 export class SuperheroService {
+  private apiUrl = 'https://localhost:7159/api/SuperHero';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getSuperheroes(): Observable<SuperHero[]> {
-    const superheroes = of(SUPERHEROS);
-    return superheroes;
+    return this.http.get<SuperHero[]>(this.apiUrl);
   }
 }
