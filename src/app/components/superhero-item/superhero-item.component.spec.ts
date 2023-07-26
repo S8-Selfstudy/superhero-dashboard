@@ -14,6 +14,14 @@ describe('SuperheroItemComponent', () => {
     });
     fixture = TestBed.createComponent(SuperheroItemComponent);
     component = fixture.componentInstance;
+    component.superhero = {
+      id: 1,
+      name: 'Mock Superhero',
+      firstName: 'Mock First Name',
+      lastName: 'Mock Last Name',
+      place: 'Mock Place',
+      active: true
+    };
     fixture.detectChanges();
   });
 
