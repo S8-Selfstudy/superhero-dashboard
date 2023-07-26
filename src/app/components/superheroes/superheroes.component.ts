@@ -16,4 +16,8 @@ export class SuperheroesComponent {
     this.superheroService.getSuperheroes().subscribe((superheroes) => this.superheroes = superheroes);
   }
 
+  deleteSuperhero(superhero: SuperHero) {
+    this.superheroService.deleteSuperhero(superhero).subscribe(() => (this.superheroes = this.superheroes.filter((s) => s.id !== superhero.id)));
+  }
+
 }

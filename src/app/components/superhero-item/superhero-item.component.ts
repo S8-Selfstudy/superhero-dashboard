@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { SuperHero } from 'src/app/SuperHero';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,7 +8,12 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./superhero-item.component.css']
 })
 export class SuperheroItemComponent {
-  @Input() superhero?: SuperHero;
+  @Input() superhero!: SuperHero;
+  @Output() onDeleteSuperhero: EventEmitter<SuperHero> = new EventEmitter();
   faTimes = faTimes;
+
+  onDelete(superhero: SuperHero) {
+    this.onDeleteSuperhero.emit(superhero);
+  }
 
 }
