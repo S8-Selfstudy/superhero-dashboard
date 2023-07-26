@@ -10,10 +10,17 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class SuperheroItemComponent {
   @Input() superhero!: SuperHero;
   @Output() onDeleteSuperhero: EventEmitter<SuperHero> = new EventEmitter();
+  @Output() onToggleActive: EventEmitter<SuperHero> = new EventEmitter();
   faTimes = faTimes;
 
   onDelete(superhero: SuperHero) {
     this.onDeleteSuperhero.emit(superhero);
   }
+
+  onToggle(superhero: SuperHero) {
+    this.onToggleActive.emit(superhero);
+  }
+
+
 
 }

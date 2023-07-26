@@ -3,6 +3,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs'
 import { SuperHero } from '../SuperHero';
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  }),
+};
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,5 +24,10 @@ export class SuperheroService {
   deleteSuperhero(superhero: SuperHero): Observable<SuperHero> {
     const url = `${this.apiUrl}/${superhero.id}`;
     return this.http.delete<SuperHero>(url);
+  }
+
+  updateSuperheroActive(superhero: SuperHero): Observable<SuperHero> {
+    const url = `${this.apiUrl}/${superhero.id}`;
+    return this.http.put<SuperHero>(url, superhero, httpOptions);
   }
 }

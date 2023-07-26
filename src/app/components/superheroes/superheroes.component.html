@@ -1,2 +1,2 @@
 <app-superhero-item *ngFor="let superhero of superheroes" [superhero]="superhero"
-    (onDeleteSuperhero)="deleteSuperhero(superhero)"></app-superhero-item>
+    (onDeleteSuperhero)="deleteSuperhero(superhero)" (onToggleActive)="toggleActive(superhero)"></app-superhero-item>

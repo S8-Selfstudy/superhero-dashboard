@@ -1,4 +1,4 @@
-<div class="superhero">
+<div [ngClass]="{active: superhero.active}" class="superhero" (dblclick)="onToggle(superhero)">
     <h3>{{superhero.name}} <fa-icon (click)="onDelete(superhero)" [ngStyle]="{'color': 'red'}"
             [icon]="faTimes"></fa-icon></h3>
     <p>{{superhero.firstName}} {{superhero.lastName}} - {{superhero.place}}</p>

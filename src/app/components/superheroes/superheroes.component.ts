@@ -20,4 +20,9 @@ export class SuperheroesComponent {
     this.superheroService.deleteSuperhero(superhero).subscribe(() => (this.superheroes = this.superheroes.filter((s) => s.id !== superhero.id)));
   }
 
+  toggleActive(superhero: SuperHero) {
+    superhero.active = !superhero.active;
+    this.superheroService.updateSuperheroActive(superhero).subscribe();
+  }
+
 }
