@@ -30,4 +30,8 @@ export class SuperheroService {
     const url = `${this.apiUrl}/${superhero.id}`;
     return this.http.put<SuperHero>(url, superhero, httpOptions);
   }
+
+  addSuperhero(superhero: SuperHero):Observable<SuperHero> {
+    return this.http.post<SuperHero>(this.apiUrl, superhero, httpOptions)
+  }
 }

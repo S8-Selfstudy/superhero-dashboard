@@ -14,29 +14,27 @@ export class AddSuperheroComponent {
   place!: string;
   active: boolean = false;
 
-onSubmit() {
-  if(!this.name) {
-    alert('Please add a name!')
-    return;
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  onSubmit() {
+    if(!this.name) {
+      alert('Please add a name!');
+      return;
+    }
+
+    const newHero = {
+      name: this.name,
+      firstName: this.firstName,
+      lastName: this.lastName,
+      place: this.place,
+      active: this.active
+    }
+
+    this.onAddSuperhero.emit(newHero);
+    location.reload();
   }
-
-  const newHero = {
-    name: this.name,
-    firstName: this.firstName,
-    lastName: this.lastName,
-    place: this.place,
-    active: this.active
-  };
-
-  this.onAddSuperhero.emit(newHero);
-
-  //Clear form after submitting
-  this.name = '';
-  this.firstName = '';
-  this.lastName = '';
-  this.place = '';
-  this.active = false;
-}
 
 
 

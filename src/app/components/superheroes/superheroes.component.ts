@@ -26,7 +26,7 @@ export class SuperheroesComponent {
   }
 
   addSuperhero(superhero: SuperHero){
-    console.log(superhero);
+    this.superheroService.addSuperhero(superhero).subscribe((superhero) => (this.superheroes.push(superhero)));
   }
 
 }
