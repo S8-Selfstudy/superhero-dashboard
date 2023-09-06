@@ -3,6 +3,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { SuperheroesComponent } from './superheroes.component';
 import { SuperheroItemComponent } from '../superhero-item/superhero-item.component';
+import { AddSuperheroComponent } from '../add-superhero/add-superhero.component';
 
 describe('SuperheroesComponent', () => {
   let component: SuperheroesComponent;
@@ -10,7 +11,7 @@ describe('SuperheroesComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SuperheroesComponent, SuperheroItemComponent],
+      declarations: [SuperheroesComponent, SuperheroItemComponent,AddSuperheroComponent],
       imports: [FontAwesomeModule, HttpClientModule]
     });
     fixture = TestBed.createComponent(SuperheroesComponent);
