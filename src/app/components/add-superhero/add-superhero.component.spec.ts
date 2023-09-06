@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
 import { AddSuperheroComponent } from './add-superhero.component';
 
 describe('AddSuperheroComponent', () => {
@@ -8,7 +8,8 @@ describe('AddSuperheroComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AddSuperheroComponent]
+      declarations: [AddSuperheroComponent],
+      imports: [FormsModule]
     });
     fixture = TestBed.createComponent(AddSuperheroComponent);
     component = fixture.componentInstance;

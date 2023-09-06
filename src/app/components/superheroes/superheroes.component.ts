@@ -25,4 +25,8 @@ export class SuperheroesComponent {
     this.superheroService.updateSuperheroActive(superhero).subscribe();
   }
 
+  addSuperhero(superhero: SuperHero){
+    console.log(superhero);
+  }
+
 }

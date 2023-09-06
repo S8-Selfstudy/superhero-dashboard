@@ -1,19 +1,19 @@
-<form class="add-form">
+<form class="add-form" (ngSubmit)="onSubmit()">
     <div class="form-control">
         <label for="name">Superhero</label>
-        <input type="text" name="name" id="name" placeholder="Add superhero">
+        <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="Add superhero">
     </div>
     <div class="form-control">
         <label for="firstName">First name</label>
-        <input type="text" name="firstName" id="firstName" placeholder="Add first name">
+        <input type="text" name="firstName" [(ngModel)]="firstName" id="firstName" placeholder="Add first name">
     </div>
     <div class="form-control">
         <label for="lastName">Last name</label>
-        <input type="text" name="lastName" id="lastName" placeholder="Add last name">
+        <input type="text" name="lastName" [(ngModel)]="lastName" id="lastName" placeholder="Add last name">
     </div>
     <div class="form-control">
         <label for="place">Place</label>
-        <input type="text" name="place" id="place" placeholder="Add place">
+        <input type="text" name="place" [(ngModel)]="place" id="place" placeholder="Add place">
     </div>
     <div class="form-control form-control-check">
         <label for="active">Set active</label>
