@@ -1,5 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { SuperHero } from 'src/app/SuperHero';
+import { UiService } from 'src/app/services/ui.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-add-superhero',
@@ -13,8 +15,12 @@ export class AddSuperheroComponent {
   lastName!: string;
   place!: string;
   active: boolean = false;
+  showAddSuperhero!: boolean;
+  subscription!: Subscription;
 
-  constructor() {}
+  constructor(private uiService: UiService) {
+    this.subscription = this.uiService.onToggle().subscribe((value => this.showAddSuperhero = value));
+  }
 
   ngOnInit(): void {}
 

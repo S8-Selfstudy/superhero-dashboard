@@ -1,4 +1,4 @@
-<form class="add-form" (ngSubmit)="onSubmit()">
+<form *ngIf="showAddSuperhero" class="add-form" (ngSubmit)="onSubmit()">
     <div class="form-control">
         <label for="name">Superhero</label>
         <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="Add superhero">

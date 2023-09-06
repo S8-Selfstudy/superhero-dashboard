@@ -9,10 +9,12 @@ import { Subscription } from 'rxjs'
 })
 export class HeaderComponent {
   title: string = 'super-dashboard';
-  showAddSuperhero!: boolean;
+  showAddSuperhero: boolean = false
   subscription!: Subscription;
 
-  constructor(private uiService: UiService) {}
+  constructor(private uiService: UiService) {
+    this.subscription = this.uiService.onToggle().subscribe((value => this.showAddSuperhero = value));
+  }
 
   toggleAddHero() {
     this.uiService.toggleAddSuperhero();
