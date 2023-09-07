@@ -4,12 +4,13 @@ import { HeaderComponent } from './components/header/header.component'; // Impor
 import { ButtonComponent } from './components/button/button.component'; // Import ButtonComponent
 import { SuperheroesComponent } from './components/superheroes/superheroes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 import { AddSuperheroComponent } from './components/add-superhero/add-superhero.component';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
     declarations: [AppComponent, HeaderComponent, ButtonComponent, SuperheroesComponent, AddSuperheroComponent],
-    imports: [HttpClientModule]
+    imports: [HttpClientModule, RouterModule]
   }));
 
   it('should create the app', () => {
