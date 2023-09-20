@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval, Observable } from 'rxjs';
 import { SuperheroService } from 'src/app/services/superhero.service';
 import { SuperHero } from 'src/app/SuperHero';
 
@@ -13,6 +14,10 @@ export class SuperheroesComponent {
   constructor(private superheroService: SuperheroService) { }
 
   ngOnInit(): void {
+    // interval(1000).subscribe((x => {
+    //   this.superheroService.getSuperheroes().subscribe((superheroes) => this.superheroes = superheroes);
+    //   console.log('test');
+    // }))
     this.superheroService.getSuperheroes().subscribe((superheroes) => this.superheroes = superheroes);
   }
 
